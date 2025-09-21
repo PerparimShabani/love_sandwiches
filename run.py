@@ -28,7 +28,6 @@ def get_sales_data():
         data_str = input("Enter your data here:\n")
         
         sales_data = data_str.split(",")
-        validate_data(sales_data)
         
         if validate_data(sales_data):
             print("Data is valid!")
@@ -65,6 +64,7 @@ def update_worksheet(data, worksheet):
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
     print(f"{worksheet} worksheet updated successfully\n")
+    
     
 def calculate_surplus_data(sales_row):
     """
